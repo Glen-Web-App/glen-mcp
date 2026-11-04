@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.tryglen/glen",
+  "title": "Glen",
+  "description": "Search your team's shared agent memory, and use and save the org's skills and documents.",
+  "version": "1.0.0",
+  "websiteUrl": "https://tryglen.com",
+  "repository": {
+    "url": "https://github.com/Glen-Web-App/glen-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.tryglen.com/mcp"
+    }
+  ]
+}
