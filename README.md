@@ -24,7 +24,17 @@ If you'd rather use an API key (for scripts, say), make one under Settings → A
 claude mcp add --transport http glen https://mcp.tryglen.com/mcp
 ```
 
-**Cursor**, or anything else that reads an `mcp.json`:
+Add `--scope project` to share it with your team through the repo's `.mcp.json`. If you write that file by hand, include `"type": "http"`, because Claude Code ignores an entry that only has a `url`:
+
+```json
+{
+  "mcpServers": {
+    "glen": { "type": "http", "url": "https://mcp.tryglen.com/mcp" }
+  }
+}
+```
+
+**Cursor**, or another client that accepts a plain `url` in its `mcp.json`:
 
 ```json
 {
@@ -34,7 +44,7 @@ claude mcp add --transport http glen https://mcp.tryglen.com/mcp
 }
 ```
 
-Using a coding agent like Cursor or pi day to day? The glen plugin is probably a better fit than this server on its own. It also records your sessions into team memory, so your work helps the next person. See the [Cursor](https://tryglen.com/docs/cursor) and [pi](https://tryglen.com/docs/pi) guides.
+Using a coding agent day to day? The glen plugin is probably a better fit than this server on its own. It also records your sessions into team memory, so your work helps the next person. See the guides for [Claude Code](https://tryglen.com/docs/claude-code), [Codex](https://tryglen.com/docs/codex), [Cursor](https://tryglen.com/docs/cursor), [pi](https://tryglen.com/docs/pi) and [Grok Build](https://tryglen.com/docs/grok).
 
 ## What you can do
 
