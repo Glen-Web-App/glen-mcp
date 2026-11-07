@@ -24,17 +24,7 @@ If you'd rather use an API key (for scripts, say), make one under Settings → A
 claude mcp add --transport http glen https://mcp.tryglen.com/mcp
 ```
 
-Add `--scope project` to share it with your team through the repo's `.mcp.json`. If you write that file by hand, include `"type": "http"`, because Claude Code ignores an entry that only has a `url`:
-
-```json
-{
-  "mcpServers": {
-    "glen": { "type": "http", "url": "https://mcp.tryglen.com/mcp" }
-  }
-}
-```
-
-**Cursor**, or another client that accepts a plain `url` in its `mcp.json`:
+**Cursor**, or anything else that reads an `mcp.json`. In Claude Code's `.mcp.json`, also add `"type": "http"`, because it ignores an entry that only has a `url`:
 
 ```json
 {
